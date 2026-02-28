@@ -31,15 +31,7 @@ export function useReviewForm() {
     return null;
   }, [formData.profilePicType, formData.profilePicValue, uploadedPicUrl]);
 
-  const presetColor = useMemo(() => {
-    if (formData.profilePicType === "preset") {
-      const preset = PRESET_AVATARS.find(
-        (a) => a.key === formData.profilePicValue
-      );
-      return preset?.color ?? getAvatarColor(formData.reviewerName);
-    }
-    return undefined;
-  }, [formData.profilePicType, formData.profilePicValue, formData.reviewerName]);
+  const presetColor = undefined;
 
   const updateField = <K extends keyof ReviewFormData>(
     key: K,

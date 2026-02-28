@@ -21,10 +21,7 @@ function HistoryItem({ review, onDelete }: { review: Review; onDelete: (id: stri
         ? PRESET_AVATARS.find((a) => a.key === review.profile_pic_value)?.src ?? null
         : null;
 
-  const presetColor =
-    review.profile_pic_type === "preset"
-      ? PRESET_AVATARS.find((a) => a.key === review.profile_pic_value)?.color
-      : undefined;
+  const presetColor = undefined;
 
   return (
     <div className="space-y-3">
