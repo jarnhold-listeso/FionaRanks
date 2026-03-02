@@ -13,8 +13,8 @@ export default function HomePage() {
         </p>
       </div>
 
-      {/* Sample review card */}
-      <div className="mt-6 w-full max-w-sm sm:mt-10 sm:max-w-none">
+      {/* Sample review card – scale down on small screens to preserve proportions */}
+      <div className="mt-6 origin-top scale-[0.85] sm:mt-10 sm:scale-100">
         <ReviewCard
           reviewerName="Fiona"
           starRating={1}
