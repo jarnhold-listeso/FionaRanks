@@ -7,6 +7,7 @@ interface ReviewCardProps {
   reviewText: string;
   profilePicUrl: string | null;
   presetColor?: string;
+  subject?: string;
 }
 
 export default function ReviewCard({
@@ -15,15 +16,21 @@ export default function ReviewCard({
   reviewText,
   profilePicUrl,
   presetColor,
+  subject,
 }: ReviewCardProps) {
   const initials = getInitials(reviewerName || "A");
   const avatarColor = presetColor ?? getAvatarColor(reviewerName || "A");
 
   return (
     <div
-      style={{ width: 480, fontFamily: "Arial, Helvetica, sans-serif" }}
-      className="rounded-xl bg-white p-6 shadow-lg"
+      style={{ maxWidth: 480, fontFamily: "Arial, Helvetica, sans-serif" }}
+      className="mx-auto w-full rounded-xl bg-white p-4 shadow-lg sm:p-6"
     >
+      {/* Subject header (tech system name) */}
+      {subject && (
+        <p className="mb-2 text-base font-bold text-gray-900">{subject}</p>
+      )}
+
       {/* Header: avatar + name + stars */}
       <div className="flex items-start gap-3">
         {/* Profile pic */}

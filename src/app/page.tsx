@@ -3,16 +3,18 @@ import ReviewCard from "@/components/review-card";
 
 export default function HomePage() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-gray-50 px-4">
+    <div className="flex min-h-[100dvh] flex-col items-center justify-center bg-gray-50 px-4 py-12">
       <div className="text-center">
-        <h1 className="text-4xl font-bold text-gray-900">Listeso Pets Rate Things</h1>
-        <p className="mt-3 text-lg text-gray-600">
+        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+          Listeso Pets Rate Things
+        </h1>
+        <p className="mt-2 text-base text-gray-600 sm:text-lg">
           Impersonate the pets of Listeso and create Google Review-style images.
         </p>
       </div>
 
       {/* Sample review card */}
-      <div className="mt-10">
+      <div className="mt-6 w-full max-w-sm sm:mt-10 sm:max-w-none">
         <ReviewCard
           reviewerName="Fiona"
           starRating={1}
@@ -21,7 +23,7 @@ export default function HomePage() {
         />
       </div>
 
-      <div className="mt-8 flex gap-3">
+      <div className="mt-6 flex gap-3 sm:mt-8">
         <Link
           href="/login"
           className="rounded-lg bg-blue-600 px-6 py-2.5 text-sm font-medium text-white hover:bg-blue-700"
